@@ -1,9 +1,0 @@
-{{Ability
-|image=
-|level=
-|requirement=
-|name=
-|description=
-|activation=
-|object=
-}}
