@@ -1,0 +1,24 @@
+<tabview>
+Armor Sets/A|A
+Armor Sets/B|B
+Armor Sets/C|C
+Armor Sets/D|D
+Armor Sets/E|E
+Armor Sets/F|F
+Armor Sets/G|G
+Armor Sets/H|H
+Armor Sets/I|I
+Armor Sets/K|K
+Armor Sets/L|L
+Armor Sets/M|M
+Armor Sets/N|N
+Armor Sets/O|O
+Armor Sets/P|P
+Armor Sets/R|R
+Armor Sets/S|S
+Armor Sets/T|T
+Armor Sets/U|U
+Armor Sets/V|V
+Armor Sets/W|W
+Armor Sets/Z|Z
+</tabview>

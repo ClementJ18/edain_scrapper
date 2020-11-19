@@ -1,0 +1,51 @@
+{{Unit
+|image=<gallery>
+Erebor Guardian Portrait.PNG|Portrait
+Erebor Guardians.jpg|In Game</gallery>
+|faction=Erebor
+|object_name=DwarvenGuardianLangbärteHorde
+|unit_type=Swordsmen
+|size=10
+|location=[[Hall of Warriors]]
+|requirement=
+|cost=200
+|command_points=60
+|time=25
+|health=410
+|armor=edaininfantryarmor
+|damage=65
+|trample_damage=
+|revenge_damage=130
+|damage_type=SLASH
+|attack_speed=1500 ms
+|speed=40
+|range=10
+|radius=
+}}
+{{Quote|I wish I could muster a legion of Dwarves, fully armed and filthy.|[[Gimli]]}}
+
+The Guardians of Erebor are the basic [[:Category:Swordsmen|swordsmen]] of [[Erebor]]. They are the [[:Category:Starting Units|starting units]] for Erebor. They are heavy units, slower than usual, but definitely are stronger than usual swordsmen. Their set of skills make them extremely useful for close combat but they lack the speed to move around the battlefield quickly.
+
+== Abilities ==
+[[File:Hammer strikes.png|35px]] '''Hammer Strikes - '''The heavy hammer of the Erebor Guardians lower the armor of the enemy units and buildings by 15% for 30 seconds. ''(Passive ability)''
+
+== Upgrades ==
+The Guardians of Erebor have access to the following upgrades:<br />
+{{Banner Carrier|Erebor}}<br />
+{{Heavy Armor|Dwarves|swordsmen}}<br />
+{{Forged Blades|Erebor|Swordsmen}}<br />
+{{War Mask}}
+
+
+== Strategy ==
+{{Empty section}}
+
+{{Dwarves Navbox}}
+[[Category:Unit]]
+[[Category:Erebor]]
+[[Category:Swordsmen]]
+[[Category:Starting Units]]
+[[Category:Dwarves]]
+[[Category:Infantry]]
+[[Category:Erebor Swordsmen]]
+[[Category:Dwarven Unit]]
