@@ -6,7 +6,7 @@ import time
 commandset_names = [
     # 'MordorFoundationCommandSet', 'MordorEconomyPlotCommandSet', 'MordorOutpostCommandSet', 
     # 'RohanFoundationCommandSet', 'RohanEconomyPlotCommandSet', 'RohanOutpostCommandSet', 
-    # 'GondorFoundationCommandSet', 'GondorEconomyPlotCommandSet', 'GondorOutpostCommandSet', 
+    'GondorFoundationCommandSet', 'GondorEconomyPlotCommandSet', 'GondorOutpostCommandSet', 
     # 'IsengardFoundationCommandSet', 'IsengardEconomyPlotCommandSet', 'IsengardOutpostCommandSet', 
     # 'ImladrisFoundationCommandSet', 'ImladrisEconomyPlotCommandSet', 'ImladrisOutpostCommandSet', 
     # 'LothlorienFoundationCommandSet', 'LothlorienEconomyPlotCommandSet', 'LothlorienOutpostCommandSet', 
@@ -159,16 +159,16 @@ def write_data(building):
 def main():
     commandbuttons = {}
     for file in ["commandbutton.ini", "includes\\commandbutton.inc", "includes\\FBTempcommandbutton.inc"]:
-        new = parse_file("C:\\Users\\Clement\\Documents\\Beta Files\\data\\ini\\{}".format(file))
+        new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
         commandbuttons = {**commandbuttons, **new}
 
     commandsets = {}
     for file in ["commandset.ini", "includes\\commandset.inc", "includes\\FBTempcommandbutton.inc"]:
-        new = parse_file("C:\\Users\\Clement\\Documents\\Beta Files\\data\\ini\\{}".format(file))
+        new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
         commandsets = {**commandsets, **new}
 
 
-    if False:
+    if True:
         buildings = get_all_buildings(commandbuttons, commandsets)
         for building in buildings:
             write_data(building)

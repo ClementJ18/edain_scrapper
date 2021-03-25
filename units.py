@@ -126,24 +126,24 @@ def write_data(horde):
 
 
 def main():
-    # commandbuttons = {}
-    # for file in ["commandbutton.ini", "includes\\commandbutton.inc", "includes\\FBTempcommandbutton.inc"]:
-    #     new = parse_file("C:\\Users\\Clement\\Documents\\Beta Files\\data\\ini\\{}".format(file))
-    #     commandbuttons = {**commandbuttons, **new}
+    commandbuttons = {}
+    for file in ["commandbutton.ini", "includes\\commandbutton.inc", "includes\\FBTempcommandbutton.inc"]:
+        new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
+        commandbuttons = {**commandbuttons, **new}
 
-    # commandsets = {}
-    # for file in ["commandset.ini", "includes\\commandset.inc", "includes\\FBTempcommandbutton.inc"]:
-    #     new = parse_file("C:\\Users\\Clement\\Documents\\Beta Files\\data\\ini\\{}".format(file))
-    #     commandsets = {**commandsets, **new}
+    commandsets = {}
+    for file in ["commandset.ini", "includes\\commandset.inc", "includes\\FBTempcommandbutton.inc"]:
+        new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
+        commandsets = {**commandsets, **new}
 
-    for x in ["LothlorienMirkwoodPalaceGuardHorde"]:
-        write_data(x)
+    # for x in ["LothlorienMirkwoodPalaceGuardHorde"]:
+    #     write_data(x)
 
-    # hordes = get_all_units(commandsets, commandbuttons)
-    # for horde in hordes:
-    #     if horde not in hero_dict and horde not in summonable_dict:
-    #         write_data(horde)
-    #         reset()
+    hordes = get_all_units(commandsets, commandbuttons)
+    for horde in hordes:
+        if horde not in hero_dict and horde not in summonable_dict:
+            write_data(horde)
+            reset()
 
 if __name__ == '__main__':
     pyautogui.hotkey("numlock")
