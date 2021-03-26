@@ -78,9 +78,7 @@ def update_page(page, stats):
             continue
 
         if args[arg] != new_stats[arg]:
-            e = f"{arg}: {args[arg]} to {new_stats[arg]}"
-            changelog += f"[{e}] \n"
-            logger.info(e)
+            logger.info(f"{arg}: {args[arg]} to {new_stats[arg]}")
             args[arg] = new_stats[arg]
             changed = True
 
@@ -105,7 +103,7 @@ def update_page(page, stats):
 
     approved = input(">>> ")
     if approved.lower().startswith("y"):
-        page.save(summary=f"Automatic update of template stats:\n{e}", minor=False)
+        page.save(summary=f"Automatic update of template stats", minor=False)
 
 
 def main():

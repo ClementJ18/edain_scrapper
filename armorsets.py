@@ -20,7 +20,7 @@ for file in ["armor.ini", "armor.inc"]:
         pass
 
 armor_dict = defaultdict(lambda: defaultdict(dict))
-current = None
+current = []
 for line in armors_raw:
     line = line.strip()
     if line.lower() in ["", "end"] or line.startswith((";", "/", "#")):
