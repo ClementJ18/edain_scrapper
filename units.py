@@ -22,7 +22,7 @@ template = """
 |image=Example
 |faction=Example
 |object_name={object}
-|unit_type=Example
+|unit_type={type}
 |size={number}
 |location=Example
 |requirement=Example
@@ -31,16 +31,27 @@ template = """
 |time={build_time}
 |health={health_points}
 |armor={armor}
-|damage={damage}
 |trample_damage={crush_damage}
 |revenge_damage={crushrevengedamage}
-|damage_type={damagetype}
 |attack_speed={attack_duration}
 |speed={speed}
-|range={attack_range}
-|radius={radius}
+|range={attack_range}{damages}
 }}}}
 """
+
+damage_templates = [
+"""
+|damage_type={damagetype}
+|damage_targets=All
+|damage={damage}
+|radius={radius}""",
+
+"""
+|damage_type_2={damagetype}
+|damage_targets_2=All
+|damage_2={damage}
+|radius_2={radius}""",
+]
 
 def search(unit):
     pyperclip.copy(unit)
@@ -87,15 +98,15 @@ def default_dict():
         "build_time":"",
         "health_points":"",
         "armor":"",
-        "damage":"",
+        # "damage":"",
         "crush_damage":"",
         "crushrevengedamage":"",
-        "damagetype":"",
+        # "damagetype":"",
         "attack_duration":"",
         "speed":"",
         "attack_range":"",
-        "radius":"",
-        "object": ""
+        "object": "",
+        "type":""
     }
 
 def get_all_units(commandsets, commandbuttons):
@@ -117,10 +128,37 @@ def write_data(horde):
 
     formatted = default_dict()
     formatted["object"] = horde
+    damages = {}
+    current_damage = None
     for x in data:
-        formatted[x.split("\t")[0].lower().replace(" ", "_").strip()] = x.split("\t")[-1].strip()
+        if x.startswith(("Damage", "Radius")):
+            if x.startswith("Damagetype"):
+                current_damage = x.split("\t")[-1]
+                damages[current_damage] = {"damagetype": current_damage}
+            else:
+                key, value = x.split("\t", maxsplit=1)
+                damages[current_damage][key.lower()] = value.strip()
 
-    final = template.format(**formatted)
+            continue
+    
+        separator = "\t"
+        if ":" in x:
+            separator = ":"
+
+        try:
+            key, value = x.split(separator, maxsplit=1)
+            formatted[key.lower().replace(" ", "_").strip()] = value.strip()
+        except ValueError:
+            print(f"WARNING: Could not parse: {x}")
+
+    damage_formatted = ""
+    counter = 0
+    for value in damages.values():
+        damage_formatted += damage_templates[counter].format(**value)
+        counter += 1
+
+    final = template.format(damages=damage_formatted, **formatted)
+
     with open("units.txt", "a+") as f:
         f.write(final)
 
@@ -136,14 +174,14 @@ def main():
         new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
         commandsets = {**commandsets, **new}
 
-    # for x in ["LothlorienMirkwoodPalaceGuardHorde"]:
-    #     write_data(x)
+    for x in ["imladrisentash"]:
+        write_data(x)
 
-    hordes = get_all_units(commandsets, commandbuttons)
-    for horde in hordes:
-        if horde not in hero_dict and horde not in summonable_dict:
-            write_data(horde)
-            reset()
+    # hordes = get_all_units(commandsets, commandbuttons)
+    # for horde in hordes:
+    #     if horde not in hero_dict and horde not in summonable_dict:
+    #         write_data(horde)
+    #         reset()
 
 if __name__ == '__main__':
     pyautogui.hotkey("numlock")
