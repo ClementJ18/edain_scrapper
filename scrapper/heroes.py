@@ -1,6 +1,6 @@
-import pyautogui
-import pyperclip
 import time
+import pyautogui
+from utils import indexes, new_obj, copy_box, search
 
 hero_dict = {
     'RohanPippin_mod': {'toggle': 0}, 
@@ -122,29 +122,13 @@ summonable_dict = {
     'GondorAnarion': {},
     'RohanTreeBerd': {"toggle": 0},
     'GondorElendil': {},
-    'IsengardMauhur': {}, 
+    'IsengardMauhur': {},
     'GasthausBilbo': {},
     'ImladrisZwillingeEdain_GraueSchar': {},
     'MordorGrishnak_mod': {},
     'GondorEarnur': {},   
 
 }
-
-
-click_search_box = (43, 241)
-click_search_button = (71, 101)
-click_data_box_top = (631, 72)
-click_data_box_bottom = (636, 251)
-
-indexes = [
-    (1625, 131),
-    (1625, 190),
-    (1625, 255),
-    (1625, 320),
-    (1625, 370)
-]
-
-new_obj = (1315, 365)
 
 template_start = """
 {{Hero"""
@@ -190,21 +174,6 @@ template_end = """
 }}
 """
 
-def search(hero):
-    pyperclip.copy(hero)
-    pyautogui.doubleClick(x=click_search_box[0], y=click_search_box[1])
-    pyautogui.hotkey('ctrl', 'v')
-    pyautogui.hotkey("enter")
-
-def copy_box():
-    pyautogui.click(x=click_data_box_top[0], y=click_data_box_top[1])
-    time.sleep(1)
-    pyautogui.hotkey("shift", "ctrl", "fn", "end")
-    time.sleep(1)
-    pyautogui.hotkey("ctrl", "c")
-
-    return [x for x in pyperclip.paste().split("\n") if x.strip() != ""]
-
 def default_dict(hero):
     return {
         "armor": "",
@@ -216,7 +185,7 @@ def default_dict(hero):
         "hero": hero,
         "crush_damage": "",
         "role": ""
-    }    
+    }
 
 def write_data(hero):
     #initial query to figure out what the hero has available
@@ -227,7 +196,7 @@ def write_data(hero):
     for x in data:
         if x.startswith("Strengths"):
             formatted["role"] = x.split(":")[1].strip()
-            
+
         formatted[x.split("\t")[0].lower().replace(" ", "_").strip()] = x.split("\t")[-1].strip()
 
     #figure out initial state of hero
@@ -281,7 +250,7 @@ def write_data(hero):
         string = string.format(**formatted)
 
     final = template_start + string + template_end
-    with open("heroes.txt", "a+") as f:
+    with open("../stats/heroes.txt", "a+") as f:
         f.write(final)
 
 def main():

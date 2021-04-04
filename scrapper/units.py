@@ -1,21 +1,8 @@
-from ini_parser import parse_file
-from heroes import hero_dict, summonable_dict, copy_box, indexes
-import pyautogui
 import time
+import pyautogui
 import pyperclip
-
-search_btn = (50, 100)
-
-unit_search = (50, 240)
-horde_search = (50, 615)
-
-matching_unit = (330, 210)
-matching_horde = (330, 590)
-
-unit_first = (50, 265)  
-horde_first = (50, 635)
-
-okay = (1090, 535)
+from heroes import hero_dict, summonable_dict
+from utils import matching_unit, unit_first, okay, horde_search, unit_search, indexes, copy_box, get_buttons_and_sets
 
 template = """
 {{{{Unit
@@ -75,6 +62,12 @@ toggles = [
     "imladrisentfir"
 ]
 
+summons = [
+    "DolAmrothGardeFootHorde",
+    "DolAmrothGardeMountedHorde",
+    "AngmarTributKarrenCarnDum"
+]
+
 def search(unit):
     pyperclip.copy(unit)
     if "horde" in unit.lower():
@@ -120,10 +113,8 @@ def default_dict():
         "build_time":"",
         "health_points":"",
         "armor":"",
-        # "damage":"",
         "crush_damage":"",
         "crushrevengedamage":"",
-        # "damagetype":"",
         "attack_duration":"",
         "speed":"",
         "attack_range":"",
@@ -131,11 +122,11 @@ def default_dict():
         "type":""
     }
 
-def get_all_units(commandsets, commandbuttons):
+def get_all_units(commandbuttons, commandsets):
     units = set()
     for button in commandbuttons.values():
         if not "Command" in button or not "Object" in button:
-            continue 
+            continue
 
         if button["Command"] == "UNIT_BUILD":
             units.add(button["Object"])
@@ -198,25 +189,17 @@ def write_data(horde, toggled=False):
     final = template.format(damages=damage_formatted, **formatted)
 
 
-    with open("units.txt", "a+") as f:
+    with open("../stats/units.txt", "a+") as f:
         f.write(final)
 
 
 def main():
-    commandbuttons = {}
-    for file in ["commandbutton.ini", "includes\\commandbutton.inc", "includes\\FBTempcommandbutton.inc"]:
-        new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
-        commandbuttons = {**commandbuttons, **new}
-
-    commandsets = {}
-    for file in ["commandset.ini", "includes\\commandset.inc", "includes\\FBTempcommandbutton.inc"]:
-        new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
-        commandsets = {**commandsets, **new}
-
+    #one specific unit
     # for x in ["ImladrisEntFir"]:
     #     write_data(x)
 
-    hordes = get_all_units(commandsets, commandbuttons)
+    #all units
+    hordes = get_all_units(*get_buttons_and_sets()).extend(summons)
     for horde in hordes:
         if horde not in hero_dict and horde not in summonable_dict:
             write_data(horde)

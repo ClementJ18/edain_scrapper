@@ -1,7 +1,5 @@
-from ini_parser import parse_file
-from heroes import hero_dict, summonable_dict, search, copy_box, click_search_button, click_search_box
 import pyautogui
-import time
+from utils import search, copy_box, okay, level_box, get_buttons_and_sets
 
 commandset_names = [
     # 'MordorFoundationCommandSet', 'MordorEconomyPlotCommandSet', 'MordorOutpostCommandSet', 
@@ -16,10 +14,6 @@ commandset_names = [
     # 'DwarvenFoundationCommandSet_EredLuin', 'DwarvenEconomyPlotCommandSet_EredLuin', 'DwarvenOutpostCommandSet_EredLuin', 
     # 'DwarvenFoundationCommandSet_Eisenberge', 'DwarvenEconomyPlotCommandSet_Eisenberge', 'DwarvenOutpostCommandSet_Eisenberge'
 ]
-
-level_box = (482, 96)
-level3_box = (482, 146)
-okay = (1090, 535)
 
 template_start = """
 {{Infobox Building"""
@@ -52,18 +46,18 @@ template_end = """
 def get_all_buildings(commandbuttons, commandsets):
     plots = {key : value for key, value in commandsets.items() if key in commandset_names}
     buildings = set()
-    for key, meta_dict in plots.items():
+    for _, meta_dict in plots.items():
         for key, value in meta_dict.items():
             if not key.isdigit():
                 continue
 
             button = commandbuttons[value]
             if not "Command" in button or not "Object" in button:
-                continue 
+                continue
 
             if button["Command"] == "FOUNDATION_CONSTRUCT" or button["Command"] == "CASTLE_UNPACK_EXPLICIT_OBJECT":
                 buildings.add(button["Object"])
-                
+
     return buildings
 
 def default_dict():
@@ -124,7 +118,7 @@ def write_data(building):
     if formatted["money_production"].isdigit() and eco_up is not None:
         formatted["money_production"] = int(int(formatted["money_production"]) * 1.25)
 
-    level2 = template_level.format(**formatted).replace("Sekunden", "Seconds") 
+    level2 = template_level.format(**formatted).replace("Sekunden", "Seconds")
 
     eco_up = None
     try:
@@ -138,7 +132,7 @@ def write_data(building):
             pyautogui.click(x=level_box[0], y=level_box[1])
             pyautogui.hotkey('down')
             pyautogui.hotkey('enter')
-    
+
     data = copy_box()
     formatted = default_dict()
     formatted["object"] = building
@@ -153,34 +147,23 @@ def write_data(building):
     level3 = template_level.format(**formatted).replace("Sekunden", "Seconds")
 
     final = template_start + basic + level1 + level2 + level3 + template_end
-    with open("buildings.txt", "a+") as f:
+    with open("../stats/buildings.txt", "a+") as f:
         f.write(final)
 
 def main():
-    commandbuttons = {}
-    for file in ["commandbutton.ini", "includes\\commandbutton.inc", "includes\\FBTempcommandbutton.inc"]:
-        new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
-        commandbuttons = {**commandbuttons, **new}
+    #all buildings
+    buildings = get_all_buildings(*get_buttons_and_sets())
+    for building in buildings:
+        write_data(building)
 
-    commandsets = {}
-    for file in ["commandset.ini", "includes\\commandset.inc", "includes\\FBTempcommandbutton.inc"]:
-        new = parse_file("C:\\Users\\Clement\\Documents\\Game Files\\data\\ini\\{}".format(file))
-        commandsets = {**commandsets, **new}
-
-
-    if True:
-        buildings = get_all_buildings(commandbuttons, commandsets)
-        for building in buildings:
-            write_data(building)
-    else:
-        write_data("imladrislagerstätte")
+    #just one building
+    # write_data("imladrislagerstätte")
 
 
 if __name__ == '__main__':
     pyautogui.hotkey("numlock")
     pyautogui.hotkey("alt", "tab")
     try:
-        # hordes, commandsets, commandbuttons = main()
         main()
     except Exception as e:
         pyautogui.hotkey("alt", "tab")
