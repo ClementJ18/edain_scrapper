@@ -57,22 +57,26 @@ def update_page(page, stats):
     args = {x.split("=", maxsplit=1)[0]: x.split("=", maxsplit=1)[1] for x in template[1]}
 
     try:
-        name = args["object_name"].lower()
+        names = args["object_name"].lower()
     except KeyError:
         try:
-            name = args["object"].lower()
+            names = args["object"].lower()
         except KeyError:
             logging.error(f"Could not find object name in: {args}")
             return
 
-    try:
-        new_stats = stats[name]
-    except KeyError:
-        logger.error(f"KeyError: {name}")
+    for name in names.split("/"):
+        name = name.strip()
+        try:
+            new_stats = stats[name]
+            break
+        except KeyError:
+            logger.error(f"KeyError: {name}")
+    else:
         return
 
     changed = False
-    logger.info(name)
+    logger.info(names)
 
     for arg in new_stats:
         if arg not in args:
