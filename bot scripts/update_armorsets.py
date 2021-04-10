@@ -12,9 +12,11 @@ args = parser.parse_args()
 logger = logging.getLogger("edain")
 logger.setLevel(logging.INFO)
 
-site = pywikibot.Site()
 
 if __name__ == '__main__':
+    site = pywikibot.Site()
+    site.login()
+
     for letter in ascii_uppercase:
         logger.info(letter)
         page = pywikibot.Page(site, f"Armor Sets/{letter}")

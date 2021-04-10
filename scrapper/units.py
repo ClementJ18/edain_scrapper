@@ -1,8 +1,8 @@
+import os
 import time
 import pyautogui
 import pyperclip
-from heroes import hero_dict, summonable_dict
-from utils import matching_unit, unit_first, okay, horde_search, unit_search, indexes, copy_box, get_buttons_and_sets
+from utils import matching_unit, unit_first, okay, horde_search, unit_search, indexes, copy_box, list_dir
 
 template = """
 {{{{Unit
@@ -22,16 +22,16 @@ template = """
 |revenge_damage={crushrevengedamage}
 |attack_speed={attack_duration}
 |speed={speed}
-|range={attack_range}
+|range={attack_range}"""
+
+template_alt = """
 |health_alt={health_points}
 |armor_alt={armor}
 |trample_damage_alt={crush_damage}
 |revenge_damage_alt={crushrevengedamage}
 |attack_speed_alt={attack_duration}
 |speed_alt={speed}
-|range_alt={attack_range}{damages}
-}}}}
-"""
+|range_alt={attack_range}"""
 
 damage_templates = [
 """
@@ -60,12 +60,6 @@ damage_templates = [
 
 toggles = [
     "imladrisentfir"
-]
-
-summons = [
-    "DolAmrothGardeFootHorde",
-    "DolAmrothGardeMountedHorde",
-    "AngmarTributKarrenCarnDum"
 ]
 
 def search(unit):
@@ -122,16 +116,9 @@ def default_dict():
         "type":""
     }
 
-def get_all_units(commandbuttons, commandsets):
-    units = set()
-    for button in commandbuttons.values():
-        if not "Command" in button or not "Object" in button:
-            continue
-
-        if button["Command"] == "UNIT_BUILD":
-            units.add(button["Object"])
-
-    return list(units)
+def get_all_units():
+    with open(os.path.join(list_dir, "unit.txt"), "r") as f:
+        return f.read().splitlines()
 
 
 def write_data(horde, toggled=False):
@@ -142,7 +129,7 @@ def write_data(horde, toggled=False):
         time.sleep(5)
 
     data = copy_box()
-
+    print(horde)
     formatted = default_dict()
     formatted["object"] = horde
     damages = {}
@@ -151,7 +138,7 @@ def write_data(horde, toggled=False):
         if x.startswith(("Damage", "Radius")):
             if x.startswith("Damagetype"):
                 current_damage = x.split("\t")[-1].strip()
-                damages[current_damage] = {"damagetype": current_damage}
+                damages[current_damage] = {"damagetype": current_damage, "radius": "", "damage": ""}
             else:
                 key, value = x.split("\t", maxsplit=1)
                 damages[current_damage][key.lower()] = value.strip()
@@ -180,30 +167,31 @@ def write_data(horde, toggled=False):
     if toggled:
         return formatted, damage_formatted
 
+    alt_formatted = ""
     if horde.lower() in toggles:
         alt, dmgs = write_data(horde, toggled=True)
         damage_formatted += dmgs
 
-        formatted = {**formatted, **alt}
+        alt_formatted = template_alt.format(**alt)
 
-    final = template.format(damages=damage_formatted, **formatted)
+    final = template.format(**formatted)
 
 
     with open("../stats/units.txt", "a+") as f:
-        f.write(final)
+        f.write("".join([final, alt_formatted, damage_formatted, "\n}}\n"]))
 
 
 def main():
     #one specific unit
-    # for x in ["ImladrisEntFir"]:
-    #     write_data(x)
+    for x in ["ImladrisEntAsh"]:
+        write_data(x)
 
     #all units
-    hordes = get_all_units(*get_buttons_and_sets()).extend(summons)
-    for horde in hordes:
-        if horde not in hero_dict and horde not in summonable_dict:
-            write_data(horde)
-            reset()
+    # hordes = get_all_units()
+    # for horde in hordes:
+    #     if horde not in hero_dict and horde not in summonable_dict:
+    #         write_data(horde)
+    #         reset()
 
 if __name__ == '__main__':
     pyautogui.hotkey("numlock")

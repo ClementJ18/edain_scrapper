@@ -26,9 +26,6 @@ sm = logging.StreamHandler()
 sm.setLevel(logging.DEBUG)
 logger.addHandler(sm)
 
-site = pywikibot.Site()
-
-
 def load_stats():
     with open(parsed_args.txt, 'r') as f:
         matches = re.findall(r"{{(.*?)}}", f.read(), re.DOTALL|re.MULTILINE)
@@ -56,22 +53,22 @@ def update_page(page, stats):
 
     args = {x.split("=", maxsplit=1)[0]: x.split("=", maxsplit=1)[1] for x in template[1]}
 
-    try:
-        names = args["object_name"].lower()
-    except KeyError:
-        try:
-            names = args["object"].lower()
-        except KeyError:
-            logging.error(f"Could not find object name in: {args}")
-            return
+    names = args.pop("object_name", None)
+    if names is None:
+        names = args.pop("object", None)
 
+    if names is None:
+        logging.error(f"Could not find object name in: {args}")
+        return
+
+    names = names.lower()
     for name in names.split("/"):
         name = name.strip()
-        try:
-            new_stats = stats[name]
+        new_stats = stats.get(name, None)
+        if new_stats:
             break
-        except KeyError:
-            logger.error(f"KeyError: {name}")
+
+        logger.error(f"KeyError: {name}")
     else:
         return
 
@@ -119,6 +116,8 @@ def update_page(page, stats):
         page.save(summary="Automatic update of template stats", minor=False)
 
 if __name__ == '__main__':
+    site = pywikibot.Site()
+    site.login()
     txt_stats = load_stats()
     cat = pywikibot.Category(site,f'Category:{parsed_args.category}')
     gen = pagegenerators.CategorizedPageGenerator(cat)

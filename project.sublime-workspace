@@ -1,0 +1,881 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"damage",
+				"damage_formatted"
+			],
+			[
+				"alt",
+				"alt_formatted"
+			],
+			[
+				"cate",
+				"category_name"
+			],
+			[
+				"parse",
+				"parse_args"
+			],
+			[
+				"obj",
+				"object_name"
+			],
+			[
+				"query",
+				"query_executer"
+			],
+			[
+				"clear",
+				"clear_temporary_invites"
+			],
+			[
+				"choice",
+				"choice_list"
+			],
+			[
+				"choi",
+				"choice"
+			],
+			[
+				"chann",
+				"channel_id"
+			],
+			[
+				"is",
+				"is_owner"
+			],
+			[
+				"check",
+				"check_channel"
+			],
+			[
+				"size",
+				"size_freq"
+			],
+			[
+				"for",
+				"forEach"
+			],
+			[
+				"loc",
+				"loc_map"
+			],
+			[
+				"class",
+				"class_size_freq"
+			],
+			[
+				"jso",
+				"json_data"
+			],
+			[
+				"bott",
+				"padding-bottom\tproperty"
+			],
+			[
+				"filter",
+				"filter_value"
+			],
+			[
+				"filte",
+				"filter_column"
+			],
+			[
+				"filter-",
+				"filter-list"
+			],
+			[
+				"back",
+				"background-color\tproperty"
+			],
+			[
+				"op",
+				"operator"
+			],
+			[
+				"filter_c",
+				"filter_counter"
+			],
+			[
+				"filter_",
+				"filter_value"
+			],
+			[
+				"occ",
+				"occurance"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"sort",
+				"sortfunc"
+			],
+			[
+				"i",
+				"ife\tif … else"
+			],
+			[
+				"occu",
+				"Occurrences"
+			],
+			[
+				"ocu",
+				"Occurrences"
+			],
+			[
+				"clone",
+				"clone-table"
+			],
+			[
+				"loadi",
+				"loading-image"
+			],
+			[
+				"load",
+				"loading"
+			],
+			[
+				"table",
+				"summary-table"
+			],
+			[
+				"link",
+				"links"
+			],
+			[
+				"ine",
+				"innerHTML"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"basic",
+				"basic-stats"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"lo",
+				"locations"
+			],
+			[
+				"fo",
+				"for\tfor (…) {…}"
+			],
+			[
+				"Sword",
+				"SwordAndShield"
+			],
+			[
+				"lik",
+				"link_filepath"
+			],
+			[
+				"make",
+				"make_shortcut"
+			],
+			[
+				"ke",
+				"keep_going"
+			],
+			[
+				"ma",
+				"make_shortcut"
+			],
+			[
+				"path",
+				"path_rotwk"
+			],
+			[
+				"HaldirGoldenArrow",
+				"ModuleTag_HaldirGoldenArrowEnabler"
+			],
+			[
+				"arm",
+				"armors_raw"
+			],
+			[
+				"fi",
+				"final_string"
+			],
+			[
+				"armor",
+				"armorset"
+			],
+			[
+				"mon",
+				"money_production"
+			],
+			[
+				"eco",
+				"eco_up_1"
+			],
+			[
+				"wit",
+				"write_data"
+			],
+			[
+				"templ",
+				"template_start"
+			],
+			[
+				"buid",
+				"building"
+			],
+			[
+				"buildin",
+				"buildings"
+			],
+			[
+				"building",
+				"building_commandsets"
+			],
+			[
+				"commands",
+				"commandsets"
+			],
+			[
+				"get_all",
+				"get_all_buildings"
+			],
+			[
+				"command",
+				"commandbutton"
+			],
+			[
+				"write",
+				"write_data"
+			],
+			[
+				"unit",
+				"unit_search"
+			],
+			[
+				"attk",
+				"attack_range"
+			],
+			[
+				"attak",
+				"attack_duration"
+			],
+			[
+				"cursh",
+				"crush_damage"
+			],
+			[
+				"dam",
+				"damage"
+			],
+			[
+				"heal",
+				"health_points"
+			],
+			[
+				"obje",
+				"Object"
+			],
+			[
+				"to",
+				"toggle"
+			],
+			[
+				"new",
+				"new_obj"
+			],
+			[
+				"hero",
+				"hero_dict"
+			],
+			[
+				"template",
+				"template_end"
+			],
+			[
+				"mout",
+				"mounted"
+			],
+			[
+				"gondo",
+				"GondorFaramir"
+			],
+			[
+				"loca",
+				"locateOnScreen"
+			],
+			[
+				"def",
+				"default_dict"
+			],
+			[
+				"her",
+				"hero"
+			],
+			[
+				"format",
+				"formatted"
+			],
+			[
+				"attc",
+				"attack_range"
+			],
+			[
+				"click",
+				"click_data_box_bottom"
+			],
+			[
+				"form",
+				"formatted"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"json",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"prett",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"reload",
+				"SublimeLinter: Reload SublimeLinter and its Plugins"
+			],
+			[
+				"plugin",
+				"SublimeLinter: Reload SublimeLinter and its Plugins"
+			],
+			[
+				"toggle",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"hext",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"Hex",
+				"HexViewer: Toggle Hex View"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 171.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Clement/Documents/WikiBot/pywikibot/scripts/userscripts",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/lists",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/scrapper",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/stats"
+	],
+	"file_history":
+	[
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/scrapper/units.py",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/scrapper/utils.py",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/stats/units.txt",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/scrapper/ini_parser.py",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/lists/unit.txt",
+		"/C/Users/Clement/Documents/WikiBot/pywikibot/scripts/userscripts/get_templates.py",
+		"/C/Users/Clement/Documents/WikiBot/pywikibot/scripts/userscripts/update_template.py",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/scrapper/buildings.py",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/scrapper/heroes.py",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/goodfaction/hordes/imladris/imladrishordes.ini",
+		"/C/Users/Clement/Documents/GitHub/edain_scrapper/lists/units.txt",
+		"/C/Users/Clement/Documents/WikiBot/pywikibot/scripts/userscripts/get_category.py",
+		"/C/Users/Clement/Documents/WikiBot/pywikibot/scripts/userscripts/update_armorsets.py",
+		"/C/Users/Clement/Documents/WikiBot/pywikibot/scripts/userscripts/get_summons.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/economy.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/utils/mediawiki.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/events.py",
+		"/C/Users/Clement/Documents/Game Files/data/lotr.str",
+		"/C/Users/Clement/Downloads/ScienceDirect_citations_1617696893084.bib",
+		"/C/Users/Clement/Downloads/ScienceDirect_citations_1617696436475.bib",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/meta.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/db.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/rss.py",
+		"/C/Users/Clement/AppData/Local/Temp/scp39235/home/pi/necrobot/rings/utils/config.py",
+		"/C/Users/Clement/Downloads/sage_soca6_1.bib",
+		"/C/Users/Clement/Downloads/tandf_uasp207_112.bib",
+		"/C/Users/Clement/Downloads/tandf_hbas2012_41.bib",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/moderation.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/server.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/utilities.py",
+		"/C/Users/Clement/Documents/Warcraft III/CustomMapData/human03.txt",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/evilfaction/units/angmar/angmarhelegwen.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/specialpower.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/evilfaction/units/angmar/angmarranger.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/includes/weapon.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/evilfaction/units/evilmen/mumakil.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/weapon.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/includes/FBTempweapon.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/evilfaction/evilfactionsubobjects.ini",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/profile.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/db/create.sql",
+		"/C/Users/Clement/Documents/Warcraft III/CustomMapData/human01.txt",
+		"/C/Users/Clement/Documents/Warcraft III/CustomMapData/human02.txt",
+		"/C/Users/Clement/Downloads/iet-sen.2011.0210.bib",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/includes/commandset.inc",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/object/system/includes/systemgood.inc",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/rank.ini",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/object/system/system.ini",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/object/system/includes/system.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/evilfaction/units/evilmen/rhunschwerter.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/evilfaction/units/evilmen/Häuptlinge.ini",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/playertemplate.ini",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/_gamedata.inc",
+		"/C/Users/Clement/Downloads/sage_gaca2_300 (1).bib",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/gamedata.inc",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/includes/experiencelevels.inc",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/mappedimages/aptimages/spellbook_edainmod.ini",
+		"/C/Users/Clement/Documents/3.8.1/data/ini/science.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/goodfaction/units/rohan/rohanhelmshammerhand.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/includes/attributemodifier.inc",
+		"/C/Users/Clement/AppData/Local/Temp/scp14407/home/pi/feeds/rss_db.json",
+		"/C/Users/Clement/Downloads/Computer-game-mods-modders-modding-and-the-mod-scene.bib",
+		"/C/Users/Clement/Downloads/sage_nmsa16_1249.bib",
+		"/C/Users/Clement/Downloads/sage_gaca2_300.bib",
+		"/C/Users/Clement/Downloads/sage_slsa28_517.bib",
+		"/C/Users/Clement/AppData/Local/Temp/scp18054/home/pi/necrobot/discord.log",
+		"/C/Users/Clement/AppData/Local/Temp/scp18459/home/pi/necrobot/error.log",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/decisions.py",
+		"/C/Users/Clement/AppData/Roaming/My The Lord of the Rings, The Rise of the Witch-king Files/Maps/Die Neun/map.str",
+		"/C/Users/Clement/AppData/Roaming/My The Lord of the Rings, The Rise of the Witch-king Files/options.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/includes/commandbutton.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/_gamedata.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/system/system.ini",
+		"/C/Users/Clement/Documents/GitHub/necrobot/bot.py",
+		"/C/Users/Clement/Documents/GitHub/necrobot/rings/admin.py",
+		"/C/Users/Clement/AppData/Roaming/My The Lord of the Rings, The Rise of the Witch-king Files/Maps/map mp fords of isen i/map.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/includes/armor.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/mapobjects.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/default/object.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/experiencelevels.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/attributemodifier.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/goodfaction/structures/men/well.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/includes/objectcreationlist.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/Projectile.ini",
+		"/C/Users/Clement/Documents/Game Files/data/ini/default/science.ini",
+		"/C/Users/Clement/Downloads/Wonder Woman 1984.[2020].1080p WEBRip -WILD/Readme.txt",
+		"/C/Users/Clement/Documents/GitHub/SE/Series 2/output/demo.json",
+		"/C/Users/Clement/Documents/GitHub/SE/Series 2/styles/style.css",
+		"/C/Users/Clement/Downloads/message.txt",
+		"/C/Users/Clement/Documents/GitHub/SE/Series 2/output/example.json",
+		"/C/Users/Clement/Desktop/index2 - Copie.html",
+		"/C/Users/Clement/Documents/GitHub/SE/Series 2/script.js",
+		"/C/Users/Clement/Documents/GitHub/SE/.gitignore",
+		"/C/Users/Clement/Documents/GitHub/SE/Series 2/index.html",
+		"/C/Users/Clement/Documents/GitHub/SE/Series 2/src/Type1.rsc",
+		"/C/Users/Clement/Documents/GitHub/SE/Series 2/data.json",
+		"/C/Users/Clement/Documents/GitHub/SE/Series 2/test.html",
+		"/C/Users/Clement/AppData/Roaming/My The Lord of the Rings, The Rise of the Witch-king Files/Maps/TD Test/map.ini",
+		"/C/Users/Clement/Desktop/Visualization/index2.html",
+		"/C/Users/Clement/Desktop/Visualization/results/demo.json",
+		"/C/Users/Clement/Desktop/Visualization/index.html",
+		"/C/Users/Clement/Desktop/Visualization/styles/style.css",
+		"/C/Users/Clement/Desktop/map.str",
+		"/C/Users/Clement/Desktop/Visualization/js/Consts.js",
+		"/C/Users/Clement/Documents/Game Files/data/ini/systemgood.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/includes/commandset.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/system/includes/systemgood.inc",
+		"/C/Users/Clement/Documents/Game Files/data/ini/object/goodfaction/hordes/dwarven/dwarvenhordes.ini",
+		"/C/Users/Clement/Desktop/Visualization/data/results_demo.json",
+		"/C/Users/Clement/AppData/Local/Temp/7zO0641AF09/PaxHeader",
+		"/C/Users/Clement/AppData/Local/Temp/7zO064C3629/PaxHeader",
+		"/C/Users/Clement/AppData/Roaming/My The Lord of the Rings, The Rise of the Witch-king Files/Maps/TD Test/map.str",
+		"/C/Users/Clement/Desktop/Visualization/libs/codemirror.js",
+		"/C/Users/Clement/Desktop/Visualization/libs/d3.js",
+		"/C/Users/Clement/Downloads/citation-4276839.txt",
+		"/C/Users/Clement/Downloads/citation-4276839.bib",
+		"/C/Users/Clement/Documents/Game Files/data/ini/commandbutton.ini",
+		"/C/Users/Clement/AppData/Roaming/Sublime Text 3/Packages/User/BFMEHighlighter.sublime-syntax",
+		"/C/Program Files/Sublime Text 3/Packages/Python.sublime-package",
+		"/C/Users/Clement/Documents/GitHub/SAGELinter/linter.py",
+		"/C/Users/Clement/Documents/aotr/aotr_src/data/lotr.str",
+		"/C/Users/Clement/Documents/GitHub/SAGELinter/HOWTO.md",
+		"/C/Users/Clement/Documents/GitHub/SAGELinter/README.md",
+		"/C/Users/Clement/Documents/GitHub/SAGELinter/messages/install.txt",
+		"/C/Users/Clement/Documents/GitHub/moddb/moddb/pages.py",
+		"/C/Users/Clement/Documents/GitHub/moddb/test.py",
+		"/C/Users/Clement/Documents/GitHub/the-void/moddb 2.0/bot_farm.py",
+		"/C/Users/Clement/Documents/BFMEHighlighter.sublime-syntax"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\\t",
+			"damage_templates",
+			"get_buttons_and_sets",
+			"GandalfTheGreyNo",
+			"FG15",
+			"HelloHobbitton",
+			"FG15",
+			"invite",
+			"self.Task",
+			"B_LLLID ",
+			"Gabe",
+			"Gaben",
+			"AngmarArcherBowIceWarhead_Edain",
+			"EvilFactionIceArrow",
+			"weaponset",
+			"Imladris",
+			"SCIENCE_IMLADRIS",
+			"ImladrisSpellBook",
+			"imladris",
+			"Version ",
+			"Version",
+			"object ",
+			"rhun",
+			"Axemen",
+			"axemen",
+			"M_",
+			"choice",
+			"5",
+			"InheritableModule",
+			"starred_reaction_handler",
+			"hourly",
+			"maintenance",
+			"heal",
+			"self.owner",
+			"data",
+			"loading-image",
+			"Upgrade_Ausbau7Lorien",
+			"kasern",
+			"gifts",
+			"lorien",
+			"wild",
+			"console",
+			"getFileHierarchy",
+			"#diagram",
+			"diagram",
+			"Edikt",
+			"morgomi",
+			"morgo",
+			"SpellBookDurinstag",
+			"initializeDiagram",
+			"getFileHierarchy",
+			"Pestcontrols tw",
+			"initializeDiagram",
+			"\"file\": \"file_5.java\",",
+			"\"file\": \"file_5.java\",\n               \"start_line\": \"453\",",
+			"Contro",
+			"loadVisualization",
+			"6.0",
+			"crush",
+			"CrushDamageWeaponTemplate",
+			"crush",
+			"ENGINEE",
+			"OathBreakerArmor",
+			"BoromirModCommandSet",
+			"commandset",
+			"GameBoard",
+			"%",
+			"gameboard",
+			"GOOD_ARCHER_15",
+			"gondorarcher",
+			"EVIL_INFANTRY_15",
+			"crossbow",
+			"DorwinionNaturmagierFree",
+			"shadow",
+			"DorwinionNaturmagierFree",
+			"object ",
+			"0",
+			"object ",
+			"Object ",
+			"erde",
+			"licht",
+			"gandalf the grey",
+			"oin and ",
+			"raben",
+			"\"Kili and ",
+			"fili and kili",
+			"oil barrels",
+			"of ered Luin",
+			"dwarven workers'",
+			"the ered luin",
+			"mineshafts",
+			"siege blueprints",
+			"siege works",
+			"Hall of Warriors",
+			"hall of warriors",
+			"dwarven stonemason",
+			"summons several hordes",
+			"orc overseer\"",
+			"orc overseer",
+			"purchase upgrade",
+			"research upgrade ",
+			"purchase ",
+			"purchase",
+			"buy ",
+			"reguires: workers' tools\"",
+			"reguires",
+			"requires: workers' tools",
+			"arm\"",
+			"crossbowHordeGefecht",
+			"crossbowHorde",
+			"research weapon",
+			"summons the army of the dead",
+			"rken",
+			"\\n Passive Ability",
+			"( \\\\n){2} Passive Ability",
+			"\\n Passive Ability",
+			"\\n passive ability",
+			"Lossarnach",
+			"the short sword",
+			"limited to 3",
+			"ringlo vale sword",
+			"pelargir monster",
+			"builds battering ",
+			"trains soldiers",
+			" knights",
+			"gondor knights",
+			"norien",
+			"asfaloth"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"    ",
+			"",
+			"\\n",
+			"]]\\n* [[",
+			"]]\\n[[",
+			"TestHeroHacks",
+			"\",\\n",
+			"get_country",
+			"ALL ALLIES",
+			"ANY ",
+			",",
+			"PermaElvenWoodTreeSeed",
+			"Perma",
+			"Radial",
+			"GondorFaramir",
+			"TestHeroHacks ",
+			"CreateAHero TestHeroHacks ",
+			"attack=",
+			".charges",
+			"!$1",
+			"$1",
+			"\\n",
+			", ",
+			"\\n\\n",
+			", ",
+			"\\n",
+			"# [[:$1]]",
+			"{{{Faction}}}/",
+			"&nbsp;&nbsp;&nbsp;&nbsp;",
+			"&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;",
+			"&nbsp;&nbsp;&nbsp;&nbsp;",
+			"Gondor",
+			"BannerCarrierDestroyHordeOnDeath = No",
+			"",
+			"\\n",
+			": ",
+			"* ",
+			"*",
+			": ",
+			"",
+			"Lake-Town",
+			"",
+			"Influence of Sauron",
+			"all",
+			"article-table",
+			"    ",
+			"\\n",
+			"\"attack_range\"",
+			"Abilities"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 342.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.hex_viewer_inspector":
+	{
+		"height": 320.0
+	},
+	"pinned_build_system": "",
+	"project": "project.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 364.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

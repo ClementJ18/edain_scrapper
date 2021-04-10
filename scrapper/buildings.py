@@ -1,5 +1,6 @@
+import os
 import pyautogui
-from utils import search, copy_box, okay, level_box, get_buttons_and_sets
+from utils import search, copy_box, okay, level_box
 
 commandset_names = [
     # 'MordorFoundationCommandSet', 'MordorEconomyPlotCommandSet', 'MordorOutpostCommandSet', 
@@ -43,22 +44,9 @@ template_end = """
 }}
 """
 
-def get_all_buildings(commandbuttons, commandsets):
-    plots = {key : value for key, value in commandsets.items() if key in commandset_names}
-    buildings = set()
-    for _, meta_dict in plots.items():
-        for key, value in meta_dict.items():
-            if not key.isdigit():
-                continue
-
-            button = commandbuttons[value]
-            if not "Command" in button or not "Object" in button:
-                continue
-
-            if button["Command"] == "FOUNDATION_CONSTRUCT" or button["Command"] == "CASTLE_UNPACK_EXPLICIT_OBJECT":
-                buildings.add(button["Object"])
-
-    return buildings
+def get_all_buildings():
+    with open(os.path.join(list_dir, "building.txt"), "r") as f:
+        return f.read().splitlines()
 
 def default_dict():
     return {
@@ -152,7 +140,7 @@ def write_data(building):
 
 def main():
     #all buildings
-    buildings = get_all_buildings(*get_buttons_and_sets())
+    buildings = get_all_buildings()
     for building in buildings:
         write_data(building)
 

@@ -36,6 +36,7 @@ level_box = (482, 96)
 level3_box = (482, 146)
 
 game_files_dir = "C:\\Users\\Clement\\Documents\\Game Files\\data\\ini"
+list_dir = "C:\\Users\\Clement\\Documents\\GitHub\\edain_scrapper\\lists"
 
 def copy_box():
     pyautogui.click(x=click_data_box_top[0], y=click_data_box_top[1])

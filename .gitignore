@@ -1,5 +1,7 @@
 __pycache__
 sets
+lists
+logs
 *.ini
 *.inc
 *.txt
